@@ -8,6 +8,8 @@ body {
 a {
   text-decoration: none;
   color: black;
+  margin-left: 4em;
+  padding: 1em;
 }
 ul {
   list-style: none;
@@ -24,7 +26,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  background-color: #f8f9fa;
+  background-color: #f0f0f2;
 }
 
 .img-header {
@@ -38,22 +40,17 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-
-nav li {
-  margin-left: 3em;
-  padding: 1em;
-}
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 18px;
+  height: 16px;
   cursor: pointer;
 }
 
 .hamburger .bar {
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: black;
   border-radius: 10px;
@@ -70,10 +67,13 @@ nav li {
 }
 
 .hamburger.open .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-40deg) translate(5px, -5px);
 }
 
 @media (max-width: 768px) {
+  a{
+  margin-left: 0;
+  }
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -84,11 +84,11 @@ nav li {
     background-color: #f8f9fa;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 
   nav ul.open {
-    max-height: 300px; /* Ajustez la hauteur maximale selon le nombre d'éléments */
+    max-height: 350px; /* Ajustez la hauteur maximale selon le nombre d'éléments */
   }
 
   .hamburger {
