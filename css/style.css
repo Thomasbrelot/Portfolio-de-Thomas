@@ -2,7 +2,9 @@
 html,
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
   line-height: 1.4;
 }
 a {
@@ -20,6 +22,11 @@ ul {
   text-align: center;
 }
 
+/* modification des titres */
+h1 {
+  font-size: 40px;
+}
+
 /* modification du header */
 header {
   display: flex;
@@ -28,12 +35,10 @@ header {
   padding: 1em;
   background-color: #f0f0f2;
 }
-
 .img-header {
   max-width: 100%;
   height: auto;
 }
-
 nav ul {
   display: flex;
   list-style: none;
@@ -48,7 +53,6 @@ nav ul {
   height: 16px;
   cursor: pointer;
 }
-
 .hamburger .bar {
   height: 2px;
   width: 100%;
@@ -56,23 +60,69 @@ nav ul {
   border-radius: 10px;
   transition: 0.3s;
 }
-
 /* Animation de l'icône hamburger */
 .hamburger.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.open .bar:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.open .bar:nth-child(3) {
   transform: rotate(-40deg) translate(5px, -5px);
 }
 
+/* modification de la premiere section */
+.first-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+/* Style the text content */
+.content {
+  flex: 1 1 60%;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+/* Bold text styling */
+.bold-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Style the image container */
+.image-container {
+  flex: 1 1 30%;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the image */
+.img-first-section {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button styling */
+button {
+  margin-top: 2em;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+}
+
 @media (max-width: 768px) {
-  a{
-  margin-left: 0;
+  a {
+    margin-left: 0;
   }
   nav ul {
     flex-direction: column;
@@ -99,5 +149,19 @@ nav ul {
     text-align: center;
     padding: 1em 0;
     width: 100%;
+  }
+  /* modification de la premiere section */
+  .first-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    margin-bottom: 20px;
   }
 }
