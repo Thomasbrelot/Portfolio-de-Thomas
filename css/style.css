@@ -130,14 +130,14 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #f0f0f2;
+    background-color: #d7d9d8;
     max-height: 0;
     overflow: hidden;
     transition: 0.3s ease-in-out;
   }
 
   nav ul.open {
-    max-height: 350px; /* Ajustez la hauteur maximale selon le nombre d'éléments */
+    max-height: 100vh; /* Ajustez la hauteur maximale selon le nombre d'éléments */
   }
 
   .hamburger {
@@ -153,6 +153,7 @@ button {
   .first-section {
     flex-direction: column;
     text-align: center;
+    flex-wrap: nowrap;
   }
 
   .content {
