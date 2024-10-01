@@ -12,6 +12,7 @@ body {
   font-size: 16px;
   /* Définit un comportement fluide pour le défilement */
   scroll-behavior: smooth;
+  color: black;
 }
 a {
   color: black;
