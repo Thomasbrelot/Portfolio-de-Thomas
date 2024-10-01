@@ -1,168 +1,104 @@
-/*modification général de la page*/
-html,
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  background-color: #e1e1e1;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  line-height: 1.4;
+  /* Définit la hauteur minimale pour que le contenu occupe tout l'écran */
+  min-height: 100vh;
+  /* Améliore le lissage des polices pour une meilleure lisibilité */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Définit la taille par défaut du texte */
+  font-size: 16px;
+  /* Définit un comportement fluide pour le défilement */
+  scroll-behavior: smooth;
 }
 a {
-  text-decoration: none;
   color: black;
-  margin-left: 5em;
-  padding: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 ul {
-  list-style: none;
-  padding: 0;
-  /*display: flex;*/
-}
-.text-align-center {
-  text-align: center;
-}
-
-/* modification des titres */
-h1 {
-  font-size: 40px;
-}
-
-/* modification du header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  background-color:#d7d9d8;
-}
-.img-header {
-  max-width: 100%;
-  height: auto;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
-}
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 16px;
+  list-style-type: none;
+  text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-.hamburger .bar {
-  height: 2px;
+
+/* Modification du header */
+.header {
+  position: fixed;
   width: 100%;
-  background-color: black;
-  border-radius: 10px;
-  transition: 0.3s;
+  background-color: #cacaca;
 }
-/* Animation de l'icône hamburger */
-.hamburger.open .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+.Logo {
+  width: 4%;
+  border-radius: 100%;
 }
-.hamburger.open .bar:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open .bar:nth-child(3) {
-  transform: rotate(-40deg) translate(5px, -5px);
-}
-/* modification de la premiere section */
-.first-section {
+.nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 6em;
+  margin: 1rem 4rem;
 }
-/* Style the text content */
-.content {
-  flex: 1 1 60%;
-  min-width: 300px;
-  margin-right: 20px;
-}
-/* Bold text styling */
-.bold-text {
-  font-size: 22px;
+.nav__logo {
+  font-size: 30px;
   font-weight: bold;
 }
-/* Style the image container */
-.image-container {
-  flex: 1 1 30%;
-  min-width: 200px;
+.nav__menu {
+  position: fixed;
+  bottom: 1rem;
+  border-radius: 4rem;
+  width: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #cacaca;
+  box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.26);
+}
+.nav__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
-/* Style the image */
-.img-first-section {
-  max-width: 100%;
-  height: auto;
+.nav__item {
+  padding: 0px 1.5em;
 }
-/* Button styling */
+/* effet du survol pour la nav */
+.nav__link:hover {
+  padding: 10px;
+  border-radius: 100%;
+  background-color: white;
+}
+/* modification du reste du contenu de la page */
+main {
+  overflow: hidden;
+}
+
+/* Modification de la premiere section de la page */
+.firstSection {
+  padding-top: 10rem;
+  text-align: center;
+}
 button {
-  margin-top: 2em;
-  padding: 15px 25px;
-  font-size: 16px;
+  margin: 2rem 4rem 0rem 4rem;
+  padding: 1em 3em;
+  border-radius: 3rem;
   cursor: pointer;
+  font-size: 15px;
+  box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.26);
   border: none;
-  border-radius: 10px;
-  color: white;
-  background-color: black;
+  background-color: #e1e1e1;
 }
-
-
-
-@media (max-width: 768px) {
-  a {
-    margin-left: 0;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #d7d9d8;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease-in-out;
-  }
-
-  nav ul.open {
-    height: 100vh; /* Utilisez height au lieu de max-height */
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  nav li {
-    text-align: center;
-    padding: 1em 0;
-    width: 100%;
-  }
-
-  /* modification de la premiere section */
-  .first-section {
-    flex-direction: column;
-    text-align: center;
-    flex-wrap: nowrap;
-  }
-
-  .content {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .image-container {
-    margin-bottom: 20px;
-  }
+button:hover {
+  border: 1px solid;
+}
+.imageSectionFirst {
+  max-width: 25%;
+  background-color: #cacaca;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  margin-top: 4rem;
 }
