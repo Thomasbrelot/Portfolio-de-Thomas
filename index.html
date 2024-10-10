@@ -19,9 +19,9 @@
 </head>
 
 <body>
-    <header class="header" id="header">
+    <header class="header" id="#top">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Thomas</a>
+            <a href="top" class="nav__logo">Thomas</a>
 
             <img class="Logo" src="./image/Logo-TB-Portfolio.png" alt="Photo de mon logo d'entreprise">
 
@@ -56,34 +56,39 @@
             </div>
             <div class="reseaux">
                 <a href="https://www.linkedin.com/in/thomas-brelot" target="_blank"> <i class="fa-brands fa-linkedin-in"
-                        style="color: black; font-size: 30px;"></i> </a>
+                        style="color: white; font-size: 30px;"></i> </a>
                 <a class="responsive" href="https://github.com/Thomasbrelot" style="padding-left: 3em;" target="_blank">
-                    <i class="fa-brands fa-github" style="color: black; font-size: 30px;"></i> </a>
+                    <i class="fa-brands fa-github" style="color: white; font-size: 30px;"></i> </a>
             </div>
         </nav>
     </header>
 
     <main>
         <section class="firstSection">
-            <div>
-                <span style="font-size: 28px;">Hello,</span>
-                <H3>My name is Thomas Brelot, and I will most likely be your future web developer.</H3>
+            <div style="margin-top: 4rem;">
+                <span style="font-size: 35px;">Hello,</span>
+                <H2>My name is Thomas Brelot, and I will most likely be your future web developer.</H2>
             </div>
 
             <div class="button">
-                <a href=""><button class="firstButtton">Télécharger mon cv </button></a>
-                <a href=""><button class="secondBoutton">A propos de moi</button></a>
+                <a href="./Mon-cv/cv-portfolio-seo.png" target="_blank">
+                    <button class="firstButtton">
+                        <span class="button-text">Télécharger mon cv</span></button>
+                </a>
+                <a href="presentation"><button class="secondBoutton">
+                        <span class="button-text">A propos de moi</span>
+                    </button>
+                </a>
             </div>
-            <div>
-                <img class="imageSectionFirst" src="./image/PhotoProfesionel.png" alt="Photo qui me represente">
-            </div>
+
+            <img class="imageSectionFirst" src="./image/PhotoProfesionel.png" alt="Photo qui me represente">
         </section>
 
-        <section class="secondSection">
+        <section id="presentation" class="secondSection">
             <span class="titre"> Une petite présentation de moi ?</span>
             <h4 class="titreh4"> Que dire à mon sujet</h4>
             <div class="placementSecondSection">
-                <img class="imageSectionFirst" src="./image/PhotoProfesionel.png" alt="">
+                <img class="imgSecondSection" src="./image/PhotoProfesionel.png" alt="">
 
                 <div class="block-secondSection">
                     <div class="info">
@@ -95,21 +100,27 @@
                             </span>
                         </div>
 
-                        <div>
-                            <i class="fa-solid fa-pencil"></i>
-                            <h4>Créatif</h4>
+                        <div class="wave-btn">
+                            <span class="wave"></span>
+                            <span class="wave-text">
+                                <i class="fa-solid fa-pencil"></i>
+                                <h4>Créatif</h4>
+                            </span>
                         </div>
 
-                        <div>
-                            <i class="fa-solid fa-battery-full"></i>
-                            <h4>Autonome</h4>
+                        <div class="wave-btn">
+                            <span class="wave"></span>
+                            <span class="wave-text">
+                                <i class="fa-solid fa-battery-full"></i>
+                                <h4>Autonome</h4>
+                            </span>
                         </div>
                     </div>
 
-                    <p style="line-height: 30px; margin-top: 6rem;">Développeur Web Junior | Passionné par le
+                    <p class="placementTextPresentation">Développeur Web Junior | Passionné par le
                         développement et en quête de
                         nouveaux
-                        défis.👨‍💻 <br>
+                        défis. 👨‍💻 <br>
 
                         Hello, je vais me présenter à vous je suis Thomas, ancien mécanicien automobile diplôme
                         d'un
@@ -124,41 +135,265 @@
                         suis constamment en
                         train de me perfectionner et d'apprendre.</p>
 
-                    <button>Contactez moi 🙃 </button>
+                    <button>
+                        <span class="button-text">
+                            Contactez moi 🙃
+                        </span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <section class="threeSection">
-            <span> Mes softskills</span>
-            <h4>Mes compétences</h4>
+            <span class="titre"> Mes softskills</span>
+            <h4 class="titreh4">Mes compétences</h4>
 
-            <div class="placementThreeSection">
-                <div class="blockSkillsOne">
+            <div class="troisiemeBlock">
+                <div class="firstBlock" style="margin-left: 1rem;">
+                    <h5>Développement web</h5>
+                    <div class="globalBlock">
+                        <div class="firstLigne" style="width: 50%;">
+                            <div class="firstBlockToLigne">
+                                <i class="fa-brands fa-html5"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">HTML</span>
+                                    <span>Avancé</span>
+                                </div>
+                            </div>
 
+                            <div class="secondBlockToLigne">
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">CSS</span>
+                                    <span>Intermédiaire</span>
+                                </div>
+                            </div>
 
+                            <div class="threeBlockToLigne">
+                                <i class="fa-brands fa-square-js"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">javascript</span>
+                                    <span>Les bases</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="secondLigne">
+                            <div class="fourBlockToLigne">
+                                <i class="fa-brands fa-wordpress"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">Wordpress</span>
+                                    <span>Les bases</span>
+                                </div>
+                            </div>
+
+                            <div class="fiveBlockToLigne">
+                                <i class="fa-solid fa-shuttle-space"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">Astro</span>
+                                    <span>Débutant</span>
+                                </div>
+                            </div>
+
+                            <div class="sixBlockToLigne">
+                                <i class="fa-brands fa-php"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">Php</span>
+                                    <span>Débutant</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="blockSkillsTwo">
-                    
+
+                <div class="secondBlock">
+                    <h5>Web and Design</h5>
+                    <div class="globalBlock">
+                        <div class="firstLigne" style="width: 50%;">
+                            <div class="firstBlockToLigne">
+                                <i class="fa-brands fa-figma"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">Figma</span>
+                                    <span>Intermédiaire</span>
+                                </div>
+                            </div>
+
+                            <div class="secondBlockToLigne">
+                                <i class="fa-regular fa-keyboard"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">Illustrator</span>
+                                    <span>Débutant</span>
+                                </div>
+                            </div>
+
+                            <div class="threeBlockToLigne">
+                                <i class="fa-regular fa-keyboard"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">Photoshop</span>
+                                    <span>Les bases</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secondLigne">
+                            <div class="fourBlockToLigne">
+                                <i class="fa-solid fa-code"></i>
+                                <div class="textBlock">
+                                    <span class="styleText">Vscode</span>
+                                    <span>Avancé</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="blockSkillsThreee">
+                <div class="threeBlock" style="margin-right: 1rem;">
+                    <h5>Softskills</h5>
 
+                    <div class="globalBlock">
+                        <div class="firstLigne" style="padding: 1rem;">
+                            <div class="firstBlockToLigne alignementFleche">
+                                <i class="fa-solid fa-angle-right" style="margin-left: 2rem;"></i>
+                                <div class="textBlock">
+                                    <span>Curiosité: J’aime m’intéresser à
+                                        divers sujets, échanger et apprendre de
+                                        nouveaux langages.</span>
+                                </div>
+                            </div>
+
+                            <div class="secondBlockToLigne alignementFleche">
+                                <i class="fa-solid fa-angle-right" style="margin-left: 2rem;"></i>
+                                <div class="textBlock">
+                                    <span>Rigoureux: J'aime que les choses soient bien faites, surtout quand une erreur
+                                        peut être fatale, comme en mécanique. Je m'assure
+                                        donc de la qualité de mon travail.</span>
+                                </div>
+                            </div>
+
+                            <div class="threeBlockToLigne alignementFleche">
+                                <i class="fa-solid fa-angle-right" style="margin-left: 2rem;"></i>
+                                <div class="textBlock">
+                                    <span> Patient : je prends le temps de bien comprendre les problèmes et de résoudre
+                                        les bugs, que ce soit en développement ou
+                                        en mécanique.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </section>
 
+        <section id="portfolio" class="carousel-container">
+            <span class="titre"> Mes projets</span>
+            <h4 class="titreh4"> Mon portfolio </h4>
+
+            <div style="display: flex; align-items: center; margin-top: 6rem;">
+                <div class="carousel-3d">
+                    <div class="carousel-3d-track">
+                        <div class="carousel-3d-slide">
+                            <a href="">
+                                <img src="./exercice-site/Capture d’écran 2024-09-21 à 01.24.37.png" alt="Projet 1">
+                                <p>Projet 1 : Description du projet.</p>
+                            </a>
+                        </div>
+                        <div class="carousel-3d-slide">
+                            <a href="">
+                                <img src="./exercice-site/Capture d’écran 2024-09-22 à 18.40.22.png" alt="Projet 2">
+                                <p>Projet 2 : Description du projet.</p>
+                            </a>
+                        </div>
+                        <div class="carousel-3d-slide">
+                            <a href="">
+                                <img src="./exercice-site/Capture d’écran 2024-10-03 à 13.19.52.png" alt="Projet 3">
+                                <p>Projet 3 : Description du projet.</p>
+                            </a>
+                        </div>
+                        <div class="carousel-3d-slide">
+                            <a href="">
+                                <img src="./exercice-site/Capture d’écran 2024-10-03 à 13.21.10.png" alt="Projet 4">
+                                <p>Projet 4 : Description du projet.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button id="left" class="carousel-btn">&lt;</button>
+                <button id="right" class="carousel-btn" style="right: 10px;">&gt;</button>
+
+            </div>
+        </section>
+
+
+
+        <footer style="margin-top: 8rem;">
+            <span class="titre"> Un message ?</span>
+            <h4 class="titreh4"> Contactez Moi</h4>
+
+            <div class="grandContent">
+                <div class="contactContent">
+                    <div class="contactInfo">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <div class="contactText">
+                            <h6>Email</h6>
+                            <a href="mailto:brelotthomas@gmail.com" target="_blank">
+                                Envoyer moi un mail juste ici <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contactInfo" style="margin-top: 55px;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div class="contactText">
+                            <h6>whatsapp</h6>
+                            <a href="lien api whatsapp" target="_blank"> Vous preferez par sms ? Pas de soucis c'est par
+                                ici 😁 <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grandContent formContent">
+                    <h6>Pourquoi ne pas discuter de votre projet ?<br>Laisser moi un message, si besoin je serai prêt a
+                        repondre dans les meilleures délai</h6>
+
+                    <form action="" method="get">
+                        <div class="input-container ic1">
+                            <input id="firstname" class="input" type="text" placeholder=" " />
+                            <div class="cut"></div>
+                            <label for="firstname" class="placeholder">Votre Nom</label>
+                        </div>
+                        <div class="input-container ic2">
+                            <input id="lastname" class="input" type="text" placeholder=" " />
+                            <div class="cut"></div>
+                            <label for="lastname" class="placeholder">Votre Prénom</label>
+                        </div>
+                        <div class="input-container ic2">
+                            <input id="email" class="input" type="text" placeholder=" " />
+                            <div class="cut cut-short"></div>
+                            <label for="email" class="placeholder">Email</label>
+                        </div>
+                        <div class="input-container ic2">
+                            <input id="" class="input" type="text" placeholder=" " />
+                            <div class="cut cut-short"></div>
+                            <label for="" class="placeholder">Votre message</label>
+                        </div>
+                        <input class="buttonContact" type="submit" value="Envoyer">
+                    </form>
+                </div>
+            </div>
+        </footer>
+
+        <div class="pieddepage">
+            <span class="titrepied"> Site réaliser par moi même, en temps que développeur web junior.</span>
+
+            <div class="blockpied">
+                <div class="placementsecteurpage">
+                    <a href="#presentation" class="placementSecteurPage"><span>A mon propos</span></a>
+                    <a href="#portfolio" class="placementSecteurPage"><span>Portfolio</span></a>
+                </div>
+                <span class="reserved"><i class="fa-regular fa-copyright"></i> Thomas Brelot, All right reserved</span>
+            </div>
+        </div>
     </main>
 
-
-
-
-
-
-    <script src="./javascript/script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
-
-</html>

@@ -1,21 +1,31 @@
-// Sélectionner tous les liens de navigation
-const navLinks = document.querySelectorAll('.nav-link');
+const track = document.querySelector('.carousel-3d-track');
+const slides = Array.from(track.children);
+const nextButton = document.getElementById('left');
+const prevButton = document.getElementById('right');
 
-// Ajouter un événement de défilement pour gérer l'état actif des liens
-window.addEventListener('scroll', () => {
-  let fromTop = window.scrollY;
+let angle = 0; // L'angle de départ
+const numSlides = slides.length; // Nombre total de slides
+const theta = 360 / numSlides; // L'angle entre chaque projet
+const radius = 500; // Distance des projets du centre (modifiable selon les besoins)
 
-  navLinks.forEach((link) => {
-    let section = document.querySelector(link.getAttribute('href'));
+// Positionner les slides en cercle autour de l'axe Y
+slides.forEach((slide, index) => {
+  const rotateAngle = theta * index; // Calculer l'angle pour chaque projet
+  slide.style.transform = `rotateY(${rotateAngle}deg) translateZ(${radius}px)`; // Créer la disposition en cercle
+});
 
-    if (
-      section.offsetTop <= fromTop + 50 &&
-      section.offsetTop + section.offsetHeight > fromTop + 50
-    ) {
-      navLinks.forEach((link) => {
-        link.classList.remove('active');
-      });
-      link.classList.add('active');
-    }
-  });
+// Fonction pour faire tourner le carrousel
+const rotateCarousel = (direction) => {
+  angle += direction * theta; // Ajuster l'angle de rotation selon la direction (précédent ou suivant)
+  track.style.transform = `rotateY(${angle}deg)`; // Appliquer la rotation à l'ensemble du carrousel
+};
+
+// Bouton "suivant"
+nextButton.addEventListener('click', () => {
+  rotateCarousel(-1); // Tourner vers la gauche
+});
+
+// Bouton "précédent"
+prevButton.addEventListener('click', () => {
+  rotateCarousel(1); // Tourner vers la droite
 });
