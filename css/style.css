@@ -580,6 +580,10 @@ form {
   .nav__logo {
     display: none;
   }
+  .nav__menu {
+  bottom: 3rem;
+  width: 70%;
+}
   .textfirstsection {
     margin-top: 0;
   }
