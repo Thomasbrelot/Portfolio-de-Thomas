@@ -85,6 +85,9 @@ main {
 }
 
 /* modification de la premiere section */
+.textfirstsection {
+  margin-top: 4rem;
+}
 .firstSection {
   text-align: center;
   width: 100%;
@@ -197,13 +200,13 @@ button:hover .button-text {
 .wave::after {
   width: 250%;
   height: 25rem;
-  background: white;
+  background: whitesmoke;
   animation-delay: 1.8s;
 }
 .wave::before {
   width: 28.125rem;
   height: 25rem;
-  background-color: #0f0f0f;
+  background-color: white;
   animation-delay: 1.8s;
 }
 .wave-text {
@@ -477,25 +480,24 @@ form {
   margin-top: 10rem;
   background-color: #0f0f0f;
   color: white;
-  padding: 8rem;
 }
 .titrepied {
   text-align: center;
   font-weight: 800;
   font-size: 23px;
   border-bottom: solid 2px;
-  margin: 2.5rem;
+  margin: 6rem;
 }
 .blockpied {
   text-align: center;
   line-height: 6em;
+  margin-bottom: 4rem;
 }
 .placementSecteurPage {
   padding: 3rem;
   font-size: 18px;
-  color: white;
+  color: white !important;
 }
-
 
 /* Modification pour les écrans égal ou plus petit que 900pixel */
 @media all and (max-width: 900px) {
@@ -574,26 +576,58 @@ form {
 }
 
 /* Responsivité pour les mobiles (max-width: 500px) */
-@media (max-width: 500px) {
-  .carousel-3d {
-    height: 300px;
+@media (max-width: 500px) 
+  .nav__logo {
+    display: none;
   }
-
-  .carousel-3d-slide {
-    width: 180px; /* Réduire la taille des slides sur mobiles */
-    height: 180px;
+  .textfirstsection {
+    margin-top: 0;
   }
-
-  .carousel-btn {
-    padding: 12px 15px; /* Adapter la taille des boutons sur mobiles */
-    font-size: 16px;
+  .titre {
+    margin-top: 2rem;
   }
-
+  .info {
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+  }
+  .wave-btn{
+    margin-bottom: 2rem;
+  }
+  .placementImage{
+    margin-top: 0;
+  }
   .titre,
   .titreh4 {
     font-size: 1.2rem; /* Ajuster la taille des titres sur mobiles */
   }
+  footer{
+    margin-top: 2rem;
+  }
   form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-size: contain !important;
+    width: 90%;
+  }
+  .grandContent{
+    margin-top: 0;
+  }
+  .contactContent{
+    margin-top: 50px;
+  }
+  h6{
+    margin: 4rem 2rem;
+  }
+
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
