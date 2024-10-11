@@ -56,23 +56,22 @@ ul {
 }
 .nav__menu {
   position: fixed;
+  background-color: white;
+  border-radius: 20px;
+  width: 30%;
   bottom: 1rem;
-  border-radius: 4rem;
-  width: 40%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  background-color: #cacaca;
-  box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.26);
 }
 .nav__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0;
 }
 .nav__item {
-  padding: 0px 1.5em;
+  padding: 0rem 1.5rem;
 }
 
 /* Classe global pour la balise main */
@@ -94,7 +93,7 @@ main {
   margin-bottom: 50px;
 }
 .imageSectionFirst {
-  max-width: 30%;
+  max-width: 325px;
   width: 100%;
   height: auto;
 }
@@ -159,12 +158,13 @@ button:hover .button-text {
 }
 .placementTextPresentation {
   line-height: 2rem;
+  margin: 2rem;
 }
 .info {
   position: relative;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 6rem;
   z-index: -15;
 }
@@ -222,9 +222,7 @@ button:hover .button-text {
   padding: 0;
   border-radius: 100%;
 }
-.block-secondSection {
-  margin: 2rem;
-}
+
 /* modification de la troisième partie */
 h5 {
   text-align: center;
@@ -385,6 +383,8 @@ h6 {
   margin: 20px;
 }
 form {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   border-radius: 20px;
   box-sizing: border-box;
@@ -486,7 +486,7 @@ form {
   font-weight: 800;
   font-size: 23px;
   border-bottom: solid 2px;
-  margin: 6rem;
+  margin: 2rem auto;
 }
 .blockpied {
   text-align: center;
@@ -581,11 +581,17 @@ form {
     display: none;
   }
   .nav__menu {
-  bottom: 3rem;
-  width: 70%;
-}
+    bottom: 3rem;
+    width: 70%;
+  }
   .textfirstsection {
     margin-top: 0;
+  }
+  button {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 1.5rem auto;
   }
   .titre {
     margin-top: 2rem;
@@ -595,17 +601,17 @@ form {
     width: fit-content;
     margin: auto;
   }
-  .wave-btn{
+  .wave-btn {
     margin-bottom: 2rem;
   }
-  .placementImage{
+  .placementImage {
     margin-top: 0;
   }
   .titre,
   .titreh4 {
     font-size: 1.2rem; /* Ajuster la taille des titres sur mobiles */
   }
-  footer{
+  footer {
     margin-top: 2rem;
   }
   form {
@@ -615,16 +621,18 @@ form {
     background-size: contain !important;
     width: 90%;
   }
-  .grandContent{
+  .grandContent {
     margin-top: 0;
   }
-  .contactContent{
+  .contactContent {
     margin-top: 50px;
   }
-  h6{
+  h6 {
     margin: 4rem 2rem;
   }
-
+  .titrepied {
+  margin: 2rem 1.25rem;
+}
 }
 
 @keyframes animate {
