@@ -576,7 +576,7 @@ form {
 }
 
 /* Responsivité pour les mobiles (max-width: 500px) */
-@media (max-width: 500px) 
+@media (max-width: 500px) {
   .nav__logo {
     display: none;
   }
