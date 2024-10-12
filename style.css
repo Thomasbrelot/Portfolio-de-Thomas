@@ -63,6 +63,7 @@ ul {
   left: 0;
   right: 0;
   margin: 0 auto;
+  background-color: #0f0f0f;
 }
 .nav__list {
   display: flex;
@@ -72,6 +73,19 @@ ul {
 }
 .nav__item {
   padding: 0rem 1.5rem;
+}
+.nav__item:hover {
+  background-color: white;
+  border-radius: 30px;
+  padding: 5px 8px;
+  border: outset;
+}
+.fa-solid.fa-house:hover,
+.fa-solid.fa-user:hover,
+.fa-solid.fa-book:hover,
+.fa-solidfa-briefcase:hover,
+.fa-solid.fa-message:hover {
+  color: black !important;
 }
 
 /* Classe global pour la balise main */
@@ -98,7 +112,7 @@ main {
   height: auto;
 }
 .button {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 button,
 .buttonInput {
@@ -165,6 +179,7 @@ button:hover .button-text {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  margin-top: 6rem;
   margin-bottom: 6rem;
   z-index: -15;
 }
@@ -230,7 +245,7 @@ h5 {
 }
 .troisiemeBlock {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   margin-top: 6rem;
 }
@@ -343,6 +358,11 @@ h5 {
 #right {
   right: 20px;
 }
+.text-portfolio {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
 .display {
   display: none;
 }
@@ -391,7 +411,7 @@ form {
   height: 450px;
   width: 100%;
   z-index: -5;
-  background-image: url('../image/backgroundImage.jpg');
+  background-image: url('./image/backgroundImageContact.jpg');
   background-size: cover;
 }
 .title {
@@ -501,6 +521,9 @@ form {
 
 /* Modification pour les écrans égal ou plus petit que 900pixel */
 @media all and (max-width: 900px) {
+  .textfirstsection {
+    margin-top: 1rem;
+  }
   .nav__menu {
     width: 80%;
   }
@@ -533,7 +556,7 @@ form {
   .grandContent {
     flex-direction: column;
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
   .contactContent {
     margin-top: 45px;
@@ -556,7 +579,8 @@ form {
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   .placementImage {
     display: flex;
@@ -627,6 +651,7 @@ form {
     margin-top: 0;
   }
   .contactContent {
+    width: 80%;
     margin-top: 50px;
   }
   h6 {
@@ -634,6 +659,9 @@ form {
   }
   .titrepied {
     margin: 2rem 1.25rem;
+  }
+  .placementSecteurPage {
+    padding: 20px;
   }
 }
 
