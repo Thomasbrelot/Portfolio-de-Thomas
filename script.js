@@ -29,3 +29,13 @@ nextButton.addEventListener('click', () => {
 prevButton.addEventListener('click', () => {
   rotateCarousel(1); // Tourner vers la droite
 });
+
+//ouvrir mon cv
+function openCv() {
+  window.open('Mon-cv/cv-portfolio-seo.png', '_blank');
+}
+
+//aller a la section a mon propos
+function scrollToaPropos() {
+  document.getElementById('MonPropos').scrollIntoView({ behavior: 'smooth' });
+}
