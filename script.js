@@ -39,3 +39,7 @@ function openCv() {
 function scrollToaPropos() {
   document.getElementById('MonPropos').scrollIntoView({ behavior: 'smooth' });
 }
+// aller directement a ma présentation
+function scroolToContactezMoi() {
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
