@@ -34,6 +34,7 @@ ul {
   width: 100%;
   height: auto;
   background-color: #0f0f0f;
+  z-index: 999;
 }
 .Logo {
   max-width: 70px;
@@ -55,15 +56,14 @@ ul {
   font-weight: bold;
 }
 .nav__menu {
-  position: fixed;
-  background-color: white;
-  border-radius: 20px;
-  width: 30%;
-  bottom: 1rem;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background-color: #0f0f0f;
+  position: relative;
+  width: 400px;
+  height: 70px;
+  background: linear-gradient(135deg, black 30%, whitesmoke);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
 }
 .nav__list {
   display: flex;
@@ -73,19 +73,6 @@ ul {
 }
 .nav__item {
   padding: 0rem 1.5rem;
-}
-.nav__item:hover {
-  background-color: white;
-  border-radius: 30px;
-  padding: 5px 8px;
-  border: outset;
-}
-.fa-solid.fa-house:hover,
-.fa-solid.fa-user:hover,
-.fa-solid.fa-book:hover,
-.fa-solidfa-briefcase:hover,
-.fa-solid.fa-message:hover {
-  color: black !important;
 }
 
 /* Classe global pour la balise main */
@@ -181,7 +168,6 @@ button:hover .button-text {
   justify-content: space-evenly;
   margin-top: 6rem;
   margin-bottom: 6rem;
-  z-index: -15;
 }
 
 /* Effet de vague sur les block travail déquipe, autonomie et créatif.*/
@@ -305,58 +291,62 @@ h5 {
   width: 100%;
   margin: 6rem auto;
   text-align: center;
-  z-index: -10;
+  position: relative;
 }
-.titre,
-.titreh4 {
-  margin-bottom: 0.5rem;
-}
+
 .carousel-3d {
-  perspective: 950px;
+  perspective: 1000px; /* Distance pour observer l'effet 3D */
   width: 100%;
   height: 400px;
-}
-.carousel-3d-track {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.carousel-3d-track {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1s ease;
+  transform-style: preserve-3d; /* Pour activer la 3D */
+  transition: transform 1s ease; /* Transition pour la rotation */
 }
+
 .carousel-3d-slide {
   position: absolute;
-  transform-origin: center center;
+  top: 50%;
+  left: 50%;
   transform-style: preserve-3d;
-  text-align: center;
-  width: 400px; /* Largeur des images du carousel */
+  width: 365px;
   height: 215px;
-  transform: translateX(-50%) translateY(-50%);
+  margin: -5% -10%; /* Centrer chaque slide */
+  text-align: center;
 }
+
 .carousel-3d-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Pour que l'image garde ses proportions */
   border-radius: 10px;
 }
+
 .carousel-btn {
-  position: absolute;
-  transform: translateY(-50%);
   background-color: #cacaca;
   color: black;
   cursor: pointer;
-  font-size: 18px;
-  padding: 20px 25px;
-  border-radius: 50%;
-  z-index: 10;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 20%;
+  position: absolute;
+  top: 65%;
 }
+
 #left {
-  left: 20px;
+  left: 10px;
 }
+
 #right {
-  right: 20px;
+  right: 10px;
 }
 .text-portfolio {
   text-align: center;
@@ -368,6 +358,9 @@ h5 {
 }
 
 /* modificcation du footer */
+footer {
+  margin-top: 8rem;
+}
 .fa-regular.fa-paper-plane {
   font-size: 24px;
 }
@@ -402,6 +395,7 @@ h6 {
   text-align: center;
   margin: 20px;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -410,7 +404,6 @@ form {
   box-sizing: border-box;
   height: 450px;
   width: 100%;
-  z-index: -5;
   background-image: url('./image/backgroundImageContact.jpg');
   background-size: cover;
 }
@@ -613,6 +606,9 @@ form {
     border: solid 4px #0f0f0f;
     border-radius: 20px;
   }
+  footer {
+    margin-top: 4rem;
+  }
 }
 /* Responsivité pour les tablettes (max-width: 768px) */
 @media (max-width: 768px) {
@@ -693,4 +689,120 @@ form {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* test de la navbar */
+.navigation {
+  position: fixed;
+  width: 400px;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(black 35%, whitesmoke);
+  border-radius: 30px;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.navigation ul {
+  display: flex;
+  width: 350px;
+}
+.navigation ul li {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--clr);
+}
+.navigation ul li.active a .icon {
+  transform: translateY(-32px);
+}
+.navigation ul li a .text {
+  position: absolute;
+  color: var(--clr);
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(20px);
+}
+.indicator {
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: black;
+  border-radius: 50%;
+  border: 6px solid whitesmoke;
+  transition: 0.5s;
+}
+.indicator::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: -24px;
+  width: 24px;
+  height: 22px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 1px -15px 0 0 whitesmoke;
+}
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: 35%;
+  right: -22px;
+  width: 21px;
+  height: 24px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -15px 0 0 whitesmoke;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translatex(calc(-5px * 1));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translatex(calc(65px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translatex(calc(67px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translatex(calc(68px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translatex(calc(91px * 3));
 }

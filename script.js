@@ -1,23 +1,34 @@
+// JavaScript Carousel Logic
 const track = document.querySelector('.carousel-3d-track');
 const slides = Array.from(track.children);
-const nextButton = document.getElementById('left');
-const prevButton = document.getElementById('right');
+const nextButton = document.getElementById('right');
+const prevButton = document.getElementById('left');
 
-let angle = 0; // L'angle de départ
-const numSlides = slides.length; // Nombre total de slides
-const theta = 360 / numSlides; // L'angle entre chaque projet
-const radius = 500; // Distance des projets du centre (modifiable selon les besoins)
+let angle = 0; // Angle initial
+const numSlides = slides.length;
+const theta = 360 / numSlides; // L'angle entre chaque slide
+const radius = 500; // Distance entre les slides et le centre
 
-// Positionner les slides en cercle autour de l'axe Y
+const list = document.querySelectorAll('.list');
+
+function activeLink() {
+  list.forEach((item) => item.classList.remove('active'));
+
+  this.classList.add('active');
+}
+
+list.forEach((item) => item.addEventListener('click', activeLink));
+
+// Positionner les slides en cercle
 slides.forEach((slide, index) => {
-  const rotateAngle = theta * index; // Calculer l'angle pour chaque projet
-  slide.style.transform = `rotateY(${rotateAngle}deg) translateZ(${radius}px)`; // Créer la disposition en cercle
+  const rotateAngle = theta * index;
+  slide.style.transform = `rotateY(${rotateAngle}deg) translateZ(${radius}px)`;
 });
 
-// Fonction pour faire tourner le carrousel
+// Fonction pour tourner le carrousel
 const rotateCarousel = (direction) => {
-  angle += direction * theta; // Ajuster l'angle de rotation selon la direction (précédent ou suivant)
-  track.style.transform = `rotateY(${angle}deg)`; // Appliquer la rotation à l'ensemble du carrousel
+  angle += direction * theta;
+  track.style.transform = `rotateY(${angle}deg)`;
 };
 
 // Bouton "suivant"
@@ -35,11 +46,22 @@ function openCv() {
   window.open('Mon-cv/cv-portfolio-seo.png', '_blank');
 }
 
-//aller a la section a mon propos
+//aller a la section de ma présentation
 function scrollToaPropos() {
   document.getElementById('MonPropos').scrollIntoView({ behavior: 'smooth' });
 }
-// aller directement a ma présentation
+// aller directement à la prise de contact avec le client
 function scroolToContactezMoi() {
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
+//fonction pour aller directement à l'onglet de la navbarre
+function scroolToTopPage() {
+  document.getElementById('TopPage').scrollIntoView({ behavior: 'smooth' });
+}
+function scrollToMySkills() {
+  document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+}
+function scrollToMyPortfolio() {
+  document.getElementById('Portfolio').scrollIntoView({ behavior: 'smooth' });
 }
