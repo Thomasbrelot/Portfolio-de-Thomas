@@ -1,67 +1,67 @@
-// JavaScript Carousel Logic
-const track = document.querySelector('.carousel-3d-track');
-const slides = Array.from(track.children);
-const nextButton = document.getElementById('right');
-const prevButton = document.getElementById('left');
+//let progress = 0;
+//const progressText = document.getElementById('progress-text');
+//const loader = document.getElementById('loader');
+//const cache = document.getElementById('cache');
+//const content = document.getElementById('content');
+//const enterLink = document.getElementById('enter-link');
+//const list = document.querySelectorAll('.list');
 
-let angle = 0; // Angle initial
-const numSlides = slides.length;
-const theta = 360 / numSlides; // L'angle entre chaque slide
-const radius = 500; // Distance entre les slides et le centre
+// Masquer le loader et afficher le contenu après avoir cliqué sur le lien "Enter"
 
-const list = document.querySelectorAll('.list');
+// Sélection des éléments
+const menuIcon = document.getElementById('menu-icon');
+const closeIcon = document.getElementById('close-icon');
+const navMenu = document.getElementById('nav-menu');
 
-function activeLink() {
-  list.forEach((item) => item.classList.remove('active'));
+// Fonction pour ouvrir/fermer le menu
+function toggleMenu() {
+  // Ajout ou suppression des classes 'open' pour afficher ou cacher le menu
+  navMenu.classList.toggle('open');
 
-  this.classList.add('active');
+  // Affichage ou masquage de l'icône de fermeture
+  closeIcon.style.display = navMenu.classList.contains('open') ? 'block' : 'none';
+
+  // Basculer l'état visuel du menu icon (optionnel)
+  menuIcon.classList.toggle('open');
 }
 
-list.forEach((item) => item.addEventListener('click', activeLink));
+// Fonction pour fermer le menu
+function closeMenu() {
+  navMenu.classList.remove('open');
+  closeIcon.style.display = 'none';
+  menuIcon.classList.remove('open');
+}
 
-// Positionner les slides en cercle
-slides.forEach((slide, index) => {
-  const rotateAngle = theta * index;
-  slide.style.transform = `rotateY(${rotateAngle}deg) translateZ(${radius}px)`;
+// Écouteur pour l'icône hamburger (ouvrir le menu)
+menuIcon.addEventListener('click', (event) => {
+  event.stopPropagation(); // Empêche la propagation pour éviter la fermeture immédiate
+  toggleMenu();
 });
 
-// Fonction pour tourner le carrousel
-const rotateCarousel = (direction) => {
-  angle += direction * theta;
-  track.style.transform = `rotateY(${angle}deg)`;
-};
-
-// Bouton "suivant"
-nextButton.addEventListener('click', () => {
-  rotateCarousel(-1); // Tourner vers la gauche
+// Écouteur pour l'icône de fermeture
+closeIcon.addEventListener('click', (event) => {
+  event.stopPropagation(); // Empêche la fermeture par erreur
+  closeMenu();
 });
 
-// Bouton "précédent"
-prevButton.addEventListener('click', () => {
-  rotateCarousel(1); // Tourner vers la droite
+// Écouteur pour fermer le menu en cliquant en dehors
+document.addEventListener('click', (event) => {
+  // Si l'utilisateur clique en dehors du menu ou des icônes, fermer le menu
+  if (
+    !menuIcon.contains(event.target) &&
+    !navMenu.contains(event.target) &&
+    !closeIcon.contains(event.target)
+  ) {
+    closeMenu();
+  }
 });
+
+
+
+// Simuler le chargement avec un intervalle pour mettre à jour la progression
+//const progressInterval = setInterval(updateProgress, 20); // Chaque étape de 1% prend 30 ms
 
 //ouvrir mon cv
 function openCv() {
   window.open('Mon-cv/cv-portfolio-seo.png', '_blank');
-}
-
-//aller a la section de ma présentation
-function scrollToaPropos() {
-  document.getElementById('MonPropos').scrollIntoView({ behavior: 'smooth' });
-}
-// aller directement à la prise de contact avec le client
-function scroolToContactezMoi() {
-  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-}
-
-//fonction pour aller directement à l'onglet de la navbarre
-function scroolToTopPage() {
-  document.getElementById('TopPage').scrollIntoView({ behavior: 'smooth' });
-}
-function scrollToMySkills() {
-  document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
-}
-function scrollToMyPortfolio() {
-  document.getElementById('Portfolio').scrollIntoView({ behavior: 'smooth' });
 }
