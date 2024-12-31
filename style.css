@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+De+Haviland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+De+Haviland&family=Rubik+Glitch&display=swap');
 
 :root {
   --police-ancienne: 'Mr De Haviland', cursive;
@@ -35,6 +36,11 @@ ul {
   text-decoration: none;
   cursor: pointer;
   display: flex;
+}
+.changa-one-regular {
+  font-family: 'Changa One', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* style de la page loading */
@@ -133,12 +139,14 @@ ul {
 /* Modification du header */
 header {
   position: fixed;
+  top: 0;
   background-color: var(--primaryColor);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
+  z-index: 2;
 }
 .logo {
   max-width: 80px;
@@ -153,11 +161,12 @@ nav ul li {
 }
 nav ul li a {
   display: block;
-  padding: 15px;
+  padding: 15px 40px;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
-  position: relative; /* Nécessaire pour ::after */
+  position: relative;
+  font-size: 18px;
 }
 nav ul li a,
 nav ul li a::after {
@@ -302,6 +311,38 @@ ul.nav-mobil {
   flex-direction: column;
   margin: auto;
   text-align: center;
+}
+
+/* modification de la premiere section */
+.presentation {
+  color: #fff;
+  background-image: url(./image/background-présentation.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 4em;
+  padding: 4em;
+}
+.divPresentation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 8em 0em;
+}
+.title-first-section {
+  font-size: 35px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+.paragraphe-one,
+.paragraphe-two {
+  width: 25%;
+}
+.imagePresentation {
+  object-fit: contain;
+  max-width: 450px;
+  width: 50%;
+  height: auto;
 }
 
 /* Media Queries pour les petits écrans */
