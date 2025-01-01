@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+De+Haviland&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+De+Haviland&family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --police-ancienne: 'Mr De Haviland', cursive;
@@ -41,9 +41,6 @@ ul {
   font-family: 'Changa One', serif;
   font-weight: 400;
   font-style: normal;
-}
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 /* style de la page loading */
@@ -136,8 +133,7 @@ ul {
   100% {
     background-position: 0 50%, 50% 50%, 100% 50%;
   }
-}
-/* Fin de la modification de loading */
+} /* Fin de la modification de loading */
 
 /* Modification du header */
 header {
@@ -157,7 +153,6 @@ header {
   object-fit: contain;
   border-radius: 100%;
 }
-
 /* Effet sur les liens au hover */
 nav ul li {
   display: inline-block;
@@ -252,8 +247,8 @@ nav ul li a:hover::after {
     height: 100%;
     background: #333;
   }
-}
-/* Fin de modification du header*/
+} /* Fin de modification du header*/
+
 /* modification du menu hamburger */
 nav#nav-menu {
   display: none;
@@ -261,7 +256,7 @@ nav#nav-menu {
 .menu-icon-container {
   display: none;
   align-items: center;
-  position: relative; /* Nécessaire pour que l'icône soit bien positionnée */
+  position: relative;
 }
 .menu-icon {
   display: none;
@@ -272,7 +267,6 @@ nav#nav-menu {
   height: 24px;
   width: 30px;
 }
-
 .menu-icon span {
   background-color: var(--secondColor);
   height: 4px;
@@ -291,7 +285,6 @@ nav#nav-menu {
   transform: translateX(-100%); /* Cacher le menu par défaut */
   transition: transform 0.3s ease-in-out;
 }
-
 .nav-menu.open {
   display: flex !important;
   transform: translateX(0); /* Afficher le menu */
@@ -305,7 +298,6 @@ nav#nav-menu {
   color: var(--secondColor); /* Couleur adaptée au menu */
   display: none; /* Cachée par défaut */
 }
-
 .nav-menu.open .close-icon {
   display: block; /* Afficher lorsque le menu est ouvert */
 }
@@ -325,31 +317,30 @@ ul.nav-mobil {
   margin-top: 4em;
   padding: 4em;
 }
-.text-presentation {
-  font-size: 18px;
-}
 .divPresentation {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 8em 0em;
 }
+.text-presentation {
+  font-size: 18px;
+}
 .cta {
   position: relative;
   margin: auto;
-  padding: 19px 22px;
   transition: all 0.2s ease;
 }
 .cta:before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -20px;
+  left: -20px;
   display: block;
   border-radius: 28px;
   background: var(--secondColor);
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   transition: all 0.8s ease;
 }
 .cta span {
@@ -360,24 +351,9 @@ ul.nav-mobil {
   letter-spacing: 0.25em;
   text-transform: uppercase;
 }
-.cta svg {
-  position: relative;
-  top: 0;
-  margin-left: 10px;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke: var(--color);
-  stroke-width: 2;
-  transform: translateX(-5px);
-  transition: all 0.3s ease;
-}
 .cta:hover:before {
-  width: 100%;
+  width: 110%;
   background: var(--secondColor);
-}
-.cta:hover svg {
-  transform: translateX(0);
 }
 .cta:active {
   transform: scale(0.96);
@@ -409,7 +385,7 @@ ul.nav-mobil {
   }
   .menu-icon,
   .menu-icon-container {
-    display: flex; /* Afficher l'icône hamburger */
+    display: flex;
   }
   .nav-menu ul li a {
     font-size: 2em; /* Agrandir les liens pour une meilleure visibilité */
@@ -442,7 +418,6 @@ ul.nav-mobil {
   }
 }
 
-/* Écrans mobiles (max-width: 768px) */
 @media (max-width: 768px) {
   .nav-container {
     display: none; /* Cacher le menu principal */
