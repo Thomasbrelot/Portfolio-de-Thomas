@@ -42,6 +42,9 @@ ul {
   font-weight: 400;
   font-style: normal;
 }
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
 
 /* style de la page loading */
 .page-loading {
@@ -322,14 +325,65 @@ ul.nav-mobil {
   margin-top: 4em;
   padding: 4em;
 }
+.text-presentation {
+  font-size: 18px;
+}
 .divPresentation {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 8em 0em;
 }
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+}
+.cta:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: var(--secondColor);
+  width: 56px;
+  height: 56px;
+  transition: all 0.8s ease;
+}
+.cta span {
+  position: relative;
+  font-size: 20px;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--color);
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  background: var(--secondColor);
+}
+.cta:hover svg {
+  transform: translateX(0);
+}
+.cta:active {
+  transform: scale(0.96);
+}
 .title-first-section {
-  font-size: 35px;
+  font-size: 38px;
   letter-spacing: 8px;
   text-transform: uppercase;
   margin-bottom: 1em;
@@ -357,16 +411,34 @@ ul.nav-mobil {
   .menu-icon-container {
     display: flex; /* Afficher l'icône hamburger */
   }
-
   .nav-menu ul li a {
     font-size: 2em; /* Agrandir les liens pour une meilleure visibilité */
   }
-
   .close-icon {
     display: none; /* Afficher l'icône de fermeture */
   }
   a.link-mobil {
     margin-bottom: 1em;
+  }
+
+  /* modification de la presentation sur tablette */
+  .divPresentation {
+    flex-direction: column;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+  .paragraphe-one,
+  .paragraphe-two {
+    width: 100%;
+    text-align: center;
+  }
+  .imagePresentation {
+    margin: 4em 0;
+  }
+  .text-presentation {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
