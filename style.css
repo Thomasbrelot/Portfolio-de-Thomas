@@ -287,7 +287,9 @@ nav#nav-menu {
 }
 .nav-menu.open {
   display: flex !important;
-  transform: translateX(0); /* Afficher le menu */
+  transform: translateX(0);
+  flex-direction: column;
+  align-items: center;
 }
 .close-icon {
   position: absolute; /* Positionner dans le menu */
@@ -304,7 +306,7 @@ nav#nav-menu {
 ul.nav-mobil {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 10em auto;
   text-align: center;
 }
 
@@ -472,6 +474,13 @@ p.textSoftskill {
 }
 /* Media Queries pour les petits écrans */
 @media (max-width: 900px) {
+  .logo-mobile {
+    max-width: 80px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 100%;
+    margin-top: 5em;
+  }
   nav.stoke {
     display: none;
   }
@@ -490,6 +499,14 @@ p.textSoftskill {
   }
   a.link-mobil {
     margin-bottom: 1em;
+  }
+  /* Modification de la partie softskill sur petit ecran */
+  .softskillligne {
+    flex-direction: column;
+  }
+  .blockSoftskill {
+    width: 75%;
+    margin-bottom: 4em;
   }
 
   /* modification de la presentation sur tablette */
@@ -535,5 +552,13 @@ p.textSoftskill {
 
   .nav-menu ul li a {
     font-size: 1.5em; /* Réduire encore la taille des liens */
+  }
+
+  .globalblock {
+    flex-direction: column;
+  }
+  .glass {
+    margin-bottom: 4em;
+    width: 50%;
   }
 }
