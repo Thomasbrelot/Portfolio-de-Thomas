@@ -306,7 +306,7 @@ nav#nav-menu {
 ul.nav-mobil {
   display: flex;
   flex-direction: column;
-  margin: 10em auto;
+  margin: 5em auto;
   text-align: center;
 }
 
@@ -479,7 +479,7 @@ p.textSoftskill {
     height: auto;
     object-fit: contain;
     border-radius: 100%;
-    margin-top: 5em;
+    margin-top: 4em;
   }
   nav.stoke {
     display: none;
@@ -546,6 +546,12 @@ p.textSoftskill {
 
 /* Très petits écrans (max-width: 500px) */
 @media (max-width: 500px) {
+  .logo {
+    max-width: 55px;
+  }
+  .imagePresentation {
+    width: 80%;
+  }
   .titre-loading {
     left: auto; /* Ajustement pour les titres */
   }
@@ -553,12 +559,23 @@ p.textSoftskill {
   .nav-menu ul li a {
     font-size: 1.5em; /* Réduire encore la taille des liens */
   }
-
+  .title-seconde-section {
+    font-size: 28px;
+    padding: 1em;
+  }
+  .titleSoftskill {
+    font-size: 28px;
+    padding: 2em 0;
+  }
+  p.textSoftskill {
+    font-size: 16px;
+    margin: 2em 2em;
+  }
   .globalblock {
     flex-direction: column;
   }
   .glass {
     margin-bottom: 4em;
-    width: 50%;
+    width: 85%;
   }
 }
